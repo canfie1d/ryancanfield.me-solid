@@ -20,34 +20,37 @@ import { For } from "solid-js";
 
 const Work = props => {
   const renderProjectList = () => {
-    return (<For each={PROJECTS}>{(project, i) => (
-      <div class={cardStyle['card_row']} key={i}>
-        <div class={`${cardStyle['card__column']} ${cardStyle['card__column--auto']}`}>
-          <ProgressiveImage
-            class={`${cardStyle['card__image']} ${projectStyle['project__image']}`}
-            src={project.image}
-            alt=''
-          />
-        </div>
-        <div class={`${cardStyle['card__column']} ${cardStyle['card__column--auto']}`}>
-          <h3 class={`h3 ${cardStyle['h3']} ${cardStyle['card__title']} ${projectStyle['project__title']}`}>
-            {project.title}
-            <a href={project.link} target='_blank' rel='noopener noreferrer'>
-              Visit
-            </a>
-          </h3>
-          <div class={cardStyle['card__description-wrapper']}>
-            <p class={cardStyle['card__description']}>{project.description}</p>
+    return (
+      <For each={PROJECTS}>
+        {(project, i) => (
+          <div class={cardStyle['card_row']} key={i}>
+            <div class={`${cardStyle['card__column']} ${cardStyle['card__column--auto']}`}>
+              <ProgressiveImage
+                class={`${cardStyle['card__image']} ${projectStyle['project__image']}`}
+                src={project.image}
+                alt=''
+              />
+            </div>
+            <div class={`${cardStyle['card__column']} ${cardStyle['card__column--auto']}`}>
+              <h3 class={`h3 ${cardStyle['h3']} ${cardStyle['card__title']} ${projectStyle['project__title']}`}>
+                {project.title}
+                <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                  Visit
+                </a>
+              </h3>
+              <div class={cardStyle['card__description-wrapper']}>
+                <p class={cardStyle['card__description']}>{project.description}</p>
+              </div>
+              <Link href={project.url} class={projectStyle['project__link']}>
+                <a class={`${buttonStyle['button']} ${buttonStyle['button--secondary']}`}>
+                  Case Study
+                </a>
+              </Link>
+            </div>
           </div>
-          <Link href={project.url} class={projectStyle['project__link']}>
-            <a class={`${buttonStyle['button']} ${buttonStyle['button--secondary']}`}>
-              Case Study
-            </a>
-          </Link>
-        </div>
-      </div>
-    )};
-    </For>);
+        )};
+      </For>
+    );
   };
 
   const renderDemoList = () => {
@@ -76,10 +79,10 @@ const Work = props => {
           <span class={`${tagStyle['tag__item']} ${tagStyle['tag__item--secondary']}`}>NEW!</span> Case
           Studies
         </h3>
-        {/* <CardList twoWide cards={renderProjectList()} /> */}
+        <CardList twoWide cards={renderProjectList()} />
         <div class='hr hr--extra-margin' />
         <h3 class='h3'>Interface Demos</h3>
-        {/* <CardList cards={renderDemoList()} /> */}
+        <CardList cards={renderDemoList()} />
         <div class={style['content__split']}>
           {/* {/* <AnimatedWaypoint class={style['content__split__column']}> */}
           <div class={style['content__split__column']}>

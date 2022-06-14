@@ -8,6 +8,7 @@ import SEO from '../components/Seo';
 import lStyle from '../styles/components/layout.module.scss';
 import style from '../styles/components/contact-card.module.scss';
 import Recommendations from '../components/Recommendations';
+import { Switch } from 'solid-js';
 
 const Contact = props => {
 
@@ -16,7 +17,7 @@ const Contact = props => {
       <For each={CONTACT_POINTS}>{(contact, i) => {
         if (contact.type === 'button') {
           return (
-            <li key={i()} class={classNames(style['contact-card__item'], style['contact-card__item__email'])}>
+            <li key={i()} class={`${style['contact-card__item']} ${style['contact-card__item__email']}`}>
               <a class={style['button']} href={contact.url}>
                 {contact.title}
               </a>

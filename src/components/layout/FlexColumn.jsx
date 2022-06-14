@@ -1,3 +1,4 @@
+import { children } from "solid-js";
 import style from '../../styles/components/flex.module.scss';
 
  const FlexColumn = props => {

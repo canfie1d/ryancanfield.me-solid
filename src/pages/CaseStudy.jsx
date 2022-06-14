@@ -34,7 +34,8 @@ const CaseStudy = (props) => {
   }
 
   const renderAdditionalImages = () => {
-    return (<For each={caseStudy.additionalImages}>{(image, i) => (
+    return (
+    <For each={caseStudy.additionalImages}>{(image, i) => (
       <button
         key={`additional-image-${i}`}
         class='button button--invisible'

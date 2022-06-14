@@ -25,16 +25,16 @@ const App = () => {
   );
 
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      <Route path='/' element={<Layout />}>
         <Route path='/' element={<About />} />
         <Route path='/work' element={<Work />} />
         <Route path='/work/:id' element={<CaseStudy />} />
         <Route path='/writing' element={<Writing />} />
         <Route path='/contact' element={<Contact />} />
         <Route element={<Error />} />
-      </Routes>
-    </Layout>
+      </Route>
+    </Routes>
   );
 };
 

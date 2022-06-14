@@ -16,20 +16,20 @@ const OpenSourceList = props => {
 
   const renderItems = () => {
     return (
-    <For each={props.items}>
-      {(item, i) => (
-        <li key={i} class={style['open-source__item']}>
-          <div class={style['open-source__header']}>
-            <h4 class={`h4 ${style['h4']}`}>{item.title}</h4>
-          </div>
-          <a class='a' href={item.githubUrl}>
-            <Icon color='primary' name='github' size='x-large' />
-            <span class='visually-hidden'>{`View ${item.title} on Github`}</span>
-          </a>
-          {renderNpmLink(item)}
-        </li>
-      )}
-    </For>
+      <For each={props.items}>
+        {(item, i) => (
+          <li key={i} class={style['open-source__item']}>
+            <div class={style['open-source__header']}>
+              <h4 class={`h4 ${style['h4']}`}>{item.title}</h4>
+            </div>
+            <a class='a' href={item.githubUrl}>
+              <Icon color='primary' name='github' size='x-large' />
+              <span class='visually-hidden'>{`View ${item.title} on Github`}</span>
+            </a>
+            {renderNpmLink(item)}
+          </li>
+        )}
+      </For>
     );
   }
 

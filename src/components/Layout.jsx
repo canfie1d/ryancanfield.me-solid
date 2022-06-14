@@ -2,10 +2,9 @@
 // import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import styles from '../styles/components/layout.module.scss';
+import { Outlet } from 'solid-app-router';
 
 const Layout = (props) => {
-  const c = children(() => props.children);
-
   return (
     <div class={styles['l']}>
       <div class={styles['l--rightColumn']}>
@@ -19,7 +18,7 @@ const Layout = (props) => {
             class='fade'
             timeout={{ enter: 1000, exit: 300 }}
           > */}
-            {c()}
+            <Outlet />
           {/* </CSSTransition>
         </TransitionGroup> */}
       </div>
