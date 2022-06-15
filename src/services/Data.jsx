@@ -1,11 +1,11 @@
 export const CLIENTS = [
   {
     title: 'FreightWeb',
-    url: 'https://myfreightweb.com',
+    url: '',
   },
   {
     title: 'Xinova',
-    url: 'https://xinova.com',
+    url: '',
   },
   {
     title: 'Carnival Cruiselines',
@@ -123,7 +123,7 @@ export const ARTICLE_LINKS = [
     description: 'Bespoke Shopify/React Projects in Minutes',
     imageUrl:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Link+Images/shopify-react.png',
-    url: 'https://medium.com/helpful-human/shopify-react-scripts-6e717791d7b4',
+    url: 'https://medium.com/@canfie1d/shopify-react-scripts-6e717791d7b4',
     length: '2 min read',
   },
   {
@@ -132,7 +132,7 @@ export const ARTICLE_LINKS = [
     imageUrl:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Link+Images/tobythealien.jpg',
     url:
-      'https://medium.com/helpful-human/improving-teamwork-through-knowledge-sharing-e3c6d53e6409',
+      'https://medium.com/@canfie1d/improving-teamwork-through-knowledge-sharing-e3c6d53e6409',
     length: '3 min read',
   },
   {
@@ -141,7 +141,7 @@ export const ARTICLE_LINKS = [
     imageUrl:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Link+Images/svg-rollup.png',
     url:
-      'https://medium.com/helpful-human/svg-icon-sets-in-react-with-rollup-cd10be8206a5',
+      'https://medium.com/@canfie1d/svg-icon-sets-in-react-with-rollup-cd10be8206a5',
     length: '2 min read',
   },
   {
@@ -151,7 +151,7 @@ export const ARTICLE_LINKS = [
     imageUrl:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Link+Images/user-consideration.png',
     url:
-      'https://medium.com/helpful-human/improving-user-consideration-in-development-604a4ddeb6dd',
+      'https://medium.com/@canfie1d/improving-user-consideration-in-development-604a4ddeb6dd',
     length: '4 min read',
   },
   {
@@ -161,7 +161,7 @@ export const ARTICLE_LINKS = [
     imageUrl:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Link+Images/react-scripts.png',
     url:
-      'https://medium.com/helpful-human/creating-a-custom-maintainable-react-scripts-package-db6d16501a94',
+      'https://medium.com/@canfie1d/creating-a-custom-maintainable-react-scripts-package-db6d16501a94',
     length: '4 min read',
   },
   {

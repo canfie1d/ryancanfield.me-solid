@@ -4,9 +4,9 @@ const Footer = props => {
   return (
     <footer class={style['footer']}>
       {props.children && (
-        <div class='footer__content'>{props.children}</div>
+        <div class={style['footer__content']}>{props.children}</div>
       )}
-      <span>View the <a class={`a ${style['a']}`} href='http://www.github.com/canfie1d/ryancanfield.me-2022'>Source Code</a></span>
+      <span>View the <a class={`a ${style['a']}`} href='http://www.github.com/canfie1d/ryancanfield.me-solid'>Source Code</a></span>
     </footer>
   );
 }

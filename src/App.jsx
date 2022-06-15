@@ -20,19 +20,19 @@ const App = () => {
     "|  |  |  | |  |____ |  `----.|  `----.|  `--'  | |__| \n",
     '|__|  |__| |_______||_______||_______| \\______/  (__) \n \n',
     'Thanks for checking out my website. You can view the \n',
-    'source code here: http://www.github.com/canfie1d/ryancanfield.me-2022 \n',
+    'source code here: http://www.github.com/canfie1d/ryancanfield.me-solid \n',
     'or contact me here ryancanfield@me.com \n \n'
   );
 
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path='' element={<Layout />}>
         <Route path='/' element={<About />} />
         <Route path='/work' element={<Work />} />
         <Route path='/work/:id' element={<CaseStudy />} />
         <Route path='/writing' element={<Writing />} />
         <Route path='/contact' element={<Contact />} />
-        <Route element={<Error />} />
+        <Route path='/*all' element={<Error />} />
       </Route>
     </Routes>
   );

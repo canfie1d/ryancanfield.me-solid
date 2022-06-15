@@ -1,4 +1,4 @@
-import AnimatedWaypoint from './AnimatedWaypoint';
+// import AnimatedWaypoint from './AnimatedWaypoint';
 import CardList from './CardList';
 import Introduction from './Introduction';
 import ProgressiveImage from './ProgressiveImage';
@@ -8,8 +8,8 @@ import { For } from 'solid-js';
 const Collection = (props) => {
   const handleClick = (image, e) => {
     props.setActiveImage(image);
-    props.openModal(e);
   }
+
   const renderImages = (images) => {
     return (
       <For each={images}>{(image, i) => (
@@ -38,8 +38,9 @@ const Collection = (props) => {
         subtitle='Selected work from past projects.'
       />
       <div class={style['content']} id='content'>
-        <div class='content__split content__split--reverse-small'>
-          <AnimatedWaypoint class='content__split__column'>
+        <div class={`${style['content__split']} ${style['content__split--reverse-small']}`}>
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <button
               class='button button--invisible margin-top--large'
               onClick={[handleClick, 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/details.png']}
@@ -52,8 +53,10 @@ const Collection = (props) => {
                 />
               </div>
             </button>
-          </AnimatedWaypoint>
-          <AnimatedWaypoint class='content__split__column'>
+          </div>
+          {/* </AnimatedWaypoint> */}
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <div class='hr' />
             <h3 class='h3'>Hotelogical</h3>
             <p class='p'>
@@ -62,20 +65,22 @@ const Collection = (props) => {
               hotel rooms for discounted rates for their employees anywhere in
               the world.
             </p>
-          </AnimatedWaypoint>
+          </div>
+          {/* </AnimatedWaypoint> */}
         </div>
-        <AnimatedWaypoint>
-          <CardList
-            cards={renderImages([
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/home.png',
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/map.png',
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/results.png',
-            ])}
-          />
-        </AnimatedWaypoint>
+        {/* <AnimatedWaypoint> */}
+        <CardList
+          cards={renderImages([
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/home.png',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/map.png',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Hotelogical/results.png',
+          ])}
+        />
+        {/* </AnimatedWaypoint> */}
         {/* break */}
-        <div class='content__split'>
-          <AnimatedWaypoint class='content__split__column'>
+        <div class={style['content__split']}>
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <div class='hr' />
             <h3 class='h3'>Tru Tankless</h3>
             <p class='p'>
@@ -83,34 +88,36 @@ const Collection = (props) => {
               that would allow their customers to manage their water heaters
               across different locations.
             </p>
-          </AnimatedWaypoint>
-          <AnimatedWaypoint class='content__split__column'>
+          </div>
+          {/* </AnimatedWaypoint> */}
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <button
               class='button button--invisible margin-top--large'
               onClick={[handleClick, 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/dashboard.png']}
             >
-              <div>
-                <ProgressiveImage
-                  class='shadow display--block max-width--100'
-                  src='https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/home.png'
-                  caption=''
-                  alt=''
-                />
-              </div>
+              <ProgressiveImage
+                class='shadow display--block max-width--100'
+                src='https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/home.png'
+                caption=''
+                alt=''
+              />
             </button>
-          </AnimatedWaypoint>
+          </div>
+          {/* </AnimatedWaypoint> */}
         </div>
-        <AnimatedWaypoint>
-          <CardList
-            cards={renderImages([
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/dashboard.png',
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/login.png',
-              'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/form.png',
-            ])}
-          />
-        </AnimatedWaypoint>
-        <div class='content__split content__split--reverse-small margin-top--large'>
-          <AnimatedWaypoint class='content__split__column'>
+        {/* <AnimatedWaypoint> */}
+        <CardList
+          cards={renderImages([
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/dashboard.png',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/login.png',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/TruTankless/form.png',
+          ])}
+        />
+        {/* </AnimatedWaypoint> */}
+        <div class={`${style['content__split']} ${style['content__split--reverse-small']} margin-top--large`}>
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <button
               class='button button--invisible margin-top--large'
               onClick={[handleClick, 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/USMexPat/gdp.png']}
@@ -123,8 +130,10 @@ const Collection = (props) => {
                 />
               </div>
             </button>
-          </AnimatedWaypoint>
-          <AnimatedWaypoint class='content__split__column'>
+          </div>
+          {/* </AnimatedWaypoint> */}
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <div class='hr' />
             <h3 class='h3'>US Mex Pat</h3>
             <p class='p'>
@@ -134,9 +143,10 @@ const Collection = (props) => {
               countries. This tool was developed in partnership with Arizona
               State University for Arizona state senators.
             </p>
-          </AnimatedWaypoint>
+          </div>
+          {/* </AnimatedWaypoint> */}
         </div>
-        <AnimatedWaypoint>
+        {/* <AnimatedWaypoint> */}
           <CardList
             cards={renderImages([
               'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/USMexPat/home.png',
@@ -144,9 +154,10 @@ const Collection = (props) => {
               'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/USMexPat/form.png',
             ])}
           />
-        </AnimatedWaypoint>
-        <div class='content__split'>
-          <AnimatedWaypoint class='content__split__column'>
+        {/* </AnimatedWaypoint> */}
+        <div class={style['content__split']}>
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <div class='hr' />
             <h3 class='h3'>Command Synter</h3>
             <p class='p'>
@@ -154,8 +165,10 @@ const Collection = (props) => {
               Synapse Studios. It was used to manager development enviroments
               and virtual machines.
             </p>
-          </AnimatedWaypoint>
-          <AnimatedWaypoint class='content__split__column'>
+          </div>
+          {/* </AnimatedWaypoint> */}
+          {/* <AnimatedWaypoint class='content__split__column'> */}
+          <div class={style['content__split__column']}>
             <button
               class='button button--invisible margin-top--large'
               onClick={[handleClick, 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Command+Synter/dashboard.png']}
@@ -169,7 +182,8 @@ const Collection = (props) => {
                 />
               </div>
             </button>
-          </AnimatedWaypoint>
+          </div>
+          {/* </AnimatedWaypoint> */}
         </div>
       </div>
     </>

@@ -8,7 +8,6 @@ import SEO from '../components/Seo';
 import lStyle from '../styles/components/layout.module.scss';
 import style from '../styles/components/contact-card.module.scss';
 import Recommendations from '../components/Recommendations';
-import { Switch } from 'solid-js';
 
 const Contact = props => {
 

@@ -39,9 +39,8 @@
   padding: 0.625rem;
   font-family: var(--work);
   font-weight: 400;
-  color: var(--white);
+  color: var(--white) !important;
   text-shadow: 0 0 0 var(--white);
-  text-decoration: none;
 
   @media screen and (min-width: mq.$media-small) {
     padding: 0.625rem 1.875rem;

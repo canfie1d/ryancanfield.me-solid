@@ -68,7 +68,7 @@
   text-decoration-skip-ink: auto;
   white-space: nowrap;
   cursor: pointer;
-  cursor: url('../../assets/media/images/pointer.png') 2 2, pointer;
+  cursor: url('../assets/media/images/pointer.png') 2 2, pointer;
 
   &:focus {
     outline: 1px solid var(--primary);

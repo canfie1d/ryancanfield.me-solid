@@ -58,24 +58,26 @@
   overflow: hidden;
 }
 
-.modal {
+#modal {
+  &:empty {
+    display: none;
+  }
+
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  background: rgba(var(--primary), 0.6);
-  width: 100vw;
-  height: 100vh;
-  z-index: 99;
+  background: rgba(0,0,0,.2);
+  padding: 3rem;
+  width: 100%;
+  z-index: 1000;
 
-  & > * {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    width: 80vw;
-    max-height: 80vh;
-    overflow-y: auto;
-    transform: translate(-50%, -50%);
-    z-index: 100;
+  > div {
+    height: 100%;
+    width: 100%;
+    background: var(--off-white);
+    padding: 1rem;
   }
 }
 

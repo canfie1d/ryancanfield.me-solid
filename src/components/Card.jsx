@@ -1,9 +1,8 @@
 // import AnimatedWaypoint from '../components/AnimatedWaypoint';
+import { children } from 'solid-js';
 import style from '../styles/components/card.module.scss';
-import { children } from "solid-js";
 
 const Card = props => {
-  console.log('props: ', props);
   const classes = {
     [style['card__item']]: true,
     [props.class]: props.class
