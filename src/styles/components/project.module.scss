@@ -1,3 +1,5 @@
+@use '../dependencies/media-queries' as mq;
+
 .project {
   padding: 1.25rem;
   margin-bottom: 3.75rem;
@@ -29,5 +31,20 @@
 }
 
 .project__link {
-  margin: 1.25rem 0.625rem 0.625rem;
+  display: block;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.small-centered-layout {
+
+  > div {
+    max-width: 80%;
+    margin: auto;
+
+    @media screen and (min-width: mq.$media-small) {
+      max-width: 65%;
+    }
+  }
 }

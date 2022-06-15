@@ -13,7 +13,7 @@ const Navigation = props => {
       <ul class={style['nav__list']}>
         <li class={style['nav__item']}>
           <Link href='/'>
-            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname === '/'}}>
+            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname() === '/'}}>
               <Icon class={style['nav__link__icon']} name='about' color='white' size='large' />
               <span class={style['nav__link__title']}>About</span>
             </a>
@@ -21,7 +21,7 @@ const Navigation = props => {
         </li>
         <li class={style['nav__item']}>
           <Link href='/work'>
-            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname === '/work'}}>
+            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname() === '/work'}}>
               <Icon class={style['nav__link__icon']} name='work' color='white' size='large' />
               <span class={style['nav__link__title']}>Work</span>
             </a>
@@ -29,7 +29,7 @@ const Navigation = props => {
         </li>
         <li class={style['nav__item']}>
           <Link href='/writing'>
-            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname === '/writing'}}>
+            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname() === '/writing'}}>
               <Icon class={style['nav__link__icon' ]} name='writing' color='white' size='large' />
               <span class={style['nav__link__title']}>Writing</span>
             </a>
@@ -37,7 +37,7 @@ const Navigation = props => {
         </li>
         <li class={style['nav__item']}>
           <Link href='/contact'>
-            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname === '/contact'}}>
+            <a classList={{[style['nav__link']]: true, [style["nav__link--active"]]: pathname() === '/contact'}}>
               <Icon class={style['nav__link__icon']} name='contact' color='white' size='large' />
               <span class={style['nav__link__title']}>Contact</span>
             </a>

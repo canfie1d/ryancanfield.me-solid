@@ -4,7 +4,7 @@ const ProgressiveImage = (props) => {
   const [highResImageLoaded, setHighResImageLoaded] = createSignal(false);
 
   return (
-    <>
+    <div style={{position: 'relative', width: '100%'}}>
       <img
         {...props}
         onLoad={() => {
@@ -15,18 +15,26 @@ const ProgressiveImage = (props) => {
       />
       <img
         {...props}
-        style={{
+        style={highResImageLoaded() ? {
           position: 'absolute',
+          top: 0,
           filter: 'blur(1px)',
-          clipPath: 'inset(0)',
-          ...(!highResImageLoaded() && { transition: 'opacity ease-in 500ms' }),
-          ...(highResImageLoaded() && { opacity: 0 }),
-        }}
+          'clip-path': 'inset(0)',
+          opacity: 0
+        } : {
+          position: 'absolute',
+          top: 0,
+          filter: 'blur(1px)',
+          'clip-path': 'inset(0)',
+          opacity: 1,
+          transition: 'opacity ease-in 500ms'
+        }
+      }
         src={props.placeholderSrc}
         alt=''
       />
       <p class='p p--caption'>{props.caption}</p>
-    </>
+    </div>
   );
 };
 

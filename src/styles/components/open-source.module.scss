@@ -9,20 +9,15 @@
   .open-source__item {
     display: flex;
     flex-wrap: wrap;
-    margin: 1.25rem 0 0;
-    padding-bottom: 1.25rem;
-    flex: 1 0 100%;
+    margin: 0 0 1.25rem;
+    padding-top: 1.25rem;
+    flex: 1 1 50%;
 
-    @media screen and (min-width: mq.$media-small) and (max-width: mq.$media-large) {
-      flex: 1 1 50%;
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: 2px solid var(--tertiary);
-    }
+    border-bottom: 2px solid var(--tertiary);
 
     .open-source__header {
       flex: 0 0 100%;
+      padding-top: 1.25rem;
 
       .h4 {
         $primary: #202C39;

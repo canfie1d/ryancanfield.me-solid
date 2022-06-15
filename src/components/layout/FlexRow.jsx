@@ -1,4 +1,4 @@
-import { children } from "solid-js";
+import { children } from 'solid-js';
 import style from '../../styles/components/flex.module.scss';
   /**
   * A flex row is used to lay out content.

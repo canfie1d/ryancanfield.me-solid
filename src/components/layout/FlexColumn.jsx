@@ -1,4 +1,4 @@
-import { children } from "solid-js";
+import { children } from 'solid-js';
 import style from '../../styles/components/flex.module.scss';
 
  const FlexColumn = props => {
@@ -9,7 +9,7 @@ import style from '../../styles/components/flex.module.scss';
        class={style['flex__column']}
        style={{
          flex: `${props.grow} ${props.shrink} ${props.basis}`,
-         alignSelf: props.alignSelf,
+         'align-self': props.alignSelf,
          ...props.style,
        }}
      >

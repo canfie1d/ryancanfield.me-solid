@@ -6,9 +6,9 @@ const Video = (props) => {
         position: 'relative',
         width: '100%',
         height: 0,
-        paddingBottom: '56.25%',
+        'padding-bottom': '56.25%',
         overflow: 'hidden',
-        marginBottom: 0,
+        'margin-bottom': 0,
       }}
     >
       <video width='100%' poster={props.poster} controls={true}>

@@ -30,7 +30,7 @@
     color: var(--off-white);
     border: 1px solid transparent;
     cursor: pointer;
-    cursor: url('../../assets/media/images/pointer.png') 2 2, pointer;
+    cursor: url('../assets/media/images/pointer.png') 2 2, pointer;
 
     &.nav__link--active {
       border: 1px solid var(--off-white);

@@ -13,6 +13,17 @@
     padding: 1.25rem 3.75rem;
   }
 
+  .footer__content {
+    padding-bottom: .625rem;
+
+    a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-family: var(--work);
+      text-transform: uppercase;
+    }
+  }
+
   .a {
     font-family: var(--work);
     font-weight: 400;

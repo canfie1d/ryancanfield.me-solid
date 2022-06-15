@@ -39,7 +39,7 @@ $card-height--auto: auto;
 
   &.card__item--clickable > * {
     cursor: pointer;
-    cursor: url('../../assets/media/images/pointer.png') 2 2, pointer;
+    cursor: url('../assets/media/images/pointer.png') 2 2, pointer;
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
 
     &:hover {
@@ -145,7 +145,7 @@ $card-height--auto: auto;
 }
 
 .card__description-wrapper {
-  padding: 0.625rem;
+  padding: 0.625rem 0.625rem 1.25rem;
 }
 
 .card__description {

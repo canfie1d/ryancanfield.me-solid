@@ -1,5 +1,5 @@
 // import { Waypoint } from 'react-waypoint';
-import { createSignal, children, Show } from 'solid-js';
+import { children, createSignal, Show } from 'solid-js';
 import { createViewportObserver } from "@solid-primitives/intersection-observer"
 
 const AnimatedWaypoint = props => {
